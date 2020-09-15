@@ -1,243 +1,559 @@
 <!doctype html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
-		<meta name="format-detection" content="telephone=no" />
-		<title>锦尚中国</title>
-		<style>
-			html{
-				font-family: "Helvetica Neue", Helvetica, sans-serif;
-				font-size: 20px;
-			}
-			html,body {
-			    display:none;
-				-webkit-touch-callout:none;
-				-webkit-text-size-adjust:none;
-				-webkit-tap-highlight-color:rgba(0, 0, 0, 0);
-				-webkit-user-select:none;
-				width: 100%;
-				margin:0;
-				border:0;
-				padding:0;
-				font-style:normal;
-			}
-			body {
-				line-height: 1.5;
-				font-size: 0.8rem;
-				color: #212121;
-				background: #fff !important;
-				outline: 0;
-			}
-			.a{
-				padding-top: 50%;
-				margin: 0 auto;
-				text-align: center;
-			}
-			.a img{
-				margin: 0 auto;
-				text-align: center;
-				width: 3rem;
-			}
-			.a p{
-				text-align: center;
-				font-size: 0.85rem;
-				padding-top: 0.55rem;
-			 
-			}
-			#mb{
-				margin: 0 auto;
-				width: 85%;
-			}
-			#mb h2{
-				font-size: 1.2rem;
-				color: #FF8000;
-				text-align: center;
-				 padding-bottom: 0rem;
-			}
-			#mb div{
-				display: block;
-				width: 100%;
-				padding: 0.6rem 0;
-				margin-bottom: 1rem;
-				font-size: 0.9rem;
-				color: #fff
-			}
-			
-			.aui-btn {
-	position: relative;
-	display: inline-block;
-	font-size: 0.7rem;
-	font-weight: 400;
-	font-family: inherit;
-	text-decoration: none;
-	text-align: center;
-	margin: 0;
-	background: #FF8000;
-	padding: 0.25rem 0.6rem;
-	border-radius: 0.2rem;
-	-webkit-box-sizing: border-box;
-			box-sizing: border-box;
-	white-space: nowrap;
-	vertical-align: middle;
-	cursor: pointer;
-	touch-action: manipulation;
-	-webkit-user-select: none;
-	      	user-select: none;
-}	
-			#mb p{
-				font-size: 1.2rem;
-				color: #FF8000;
-			}
-			.f{
-				position: fixed;
-				bottom:0.5rem;
-				color: #FF8000;
-				font-size: 0.85rem;
-				line-height: 0;
-				width:100%;
-			  	padding:0 2rem;
-		 
-			    -webkit-box-sizing: border-box;
-			    		box-sizing: border-box;
-			    display: -webkit-box;
-			    display: -webkit-flex;
-			    display: flex;
-			    -webkit-box-pack: justify;
-			    -webkit-justify-content: space-between;
-			    		justify-content: space-between;
-			    -webkit-box-align: center;
-			    -webkit-align-items: center;
-			    		align-items: center;
-    		
-			}
-			.f a{
-				text-decoration:blink;
-				color: #FF8000;
-			}
-			.f img{
-				width: 1.5rem;
-				vertical-align:middle;
-				padding-right: 0.5rem;
-			}
-			
-		</style>
-	</head>
-	<body>
-		<div id="mb">
-			 
-			<h1 style="text-align: center;color: #f00; "><b style="font-weight: bold;color: #f00;">￥4000元</b><br>(谢绝还价)</h1>
-			<h2>请选择APP模板</h2>
-			<div class="aui-btn m1" type='toutiao' tapmode onClick="mb(this);">今日头条</div>
-			<div class="aui-btn m1" type='qutoutiao' tapmode onClick="mb(this);">趣头条</div>
-<!--			<p style="font-size: 0.85rem;color: #f00;text-align: center;padding-top: 1rem;">若需选择新模板，关掉APP重新打开</p>-->
-			<p style="font-size: 0.75rem;color: #999;text-align: center;">产品非运营，用途演示，第三方支付没有开通</p>
-			<p style="font-size: 0.75rem;color: #999">系统带有采集文章、图片、视频、评论、用户、小视频、微头条等等，全天24小时自动采集</p>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"
+	/>
+	<meta name="format-detection" content="telephone=no" />
+	<title>首页</title>
+	<link rel="stylesheet" type="text/css" href="css/aui.css" />
+	<link rel="stylesheet" type="text/css" href="css/ffxiang.css" />
+	<link rel="stylesheet" type="text/css" href="css/footer.css" />
+	<style>
+		#fx-header {
+			margin-bottom: 0px;
+			padding-bottom: 32px;
+			border-bottom: 1px solid #E2E2E2;
+		}
+	</style>
+</head>
+
+<body>
+	<header class="aui-bar aui-bar-nav" id="fx-header">
+		<div class="fx-header-logo">
+			<a class="aui-pull-left">
+				<span class="aui-iconfont aui-icon-left"></span>
+			</a>
+			<div class="aui-title" style="left:5rem; right: 0.2rem;" tapmode onclick="search()">
+				<div class="aui-searchbar" id="search">
+					<div class="aui-searchbar-input aui-border-radius">
+						<i class="aui-iconfont aui-icon-search"></i>
+						<input type="search" placeholder="搜索关键词" id="search-input" readonly>
+					</div>
+				</div>
+			</div>
 		</div>
-		<div class="f aui-card-list-footer">
-			<a href="mqqwpa://im/chat?chat_type=wpa&uin=1013175107&version=1&src_type=web"><img src="html/image/suxiang/1.png" />1013175107</a>
-			<p tapmode onClick="dianhua()"><img src="html/image/suxiang/2.png" />123</p>
+		<!--暂时后期开发-->
+		<!--<div class="fx-right-jia" tapmode onclick="_url('jiatypeid_win','','1')">
+			<i class="aui-iconfont aui-icon-plus"></i>
+			</div>-->
+	</header>
+	<footer class="aui-bar aui-bar-tab" id="fx-footer">
+		<div class="aui-bar-tab-item aui-active">
+			<img class="aui-img-object" src="image/w1s.png" />
+			<div class="aui-bar-tab-label">
+				主页
+			</div>
 		</div>
-		 
-		<!--<div class="a">
-			<img src="html/image/loading_more.gif" />
-			<p>正在加载...</p>
+		<div class="aui-bar-tab-item" tapmode onclick="_index_win('video_win')">
+			<img class="aui-img-object" src="image/w2.png" />
+			<div class="aui-bar-tab-label">
+				视频
+			</div>
+		</div>
+		<div class="aui-bar-tab-item" tapmode onclick="_index_win('weitoutiao_win')">
+			<img class="aui-img-object" src="image/w3.png" />
+			<div class="aui-bar-tab-label">
+				趣交流
+			</div>
+		</div>
+		<!--<div class="aui-bar-tab-item" tapmode onclick="_index_win('xiaoshipin_win')">
+			<img class="aui-img-object" src="image/w5.png" />
+			<div class="aui-bar-tab-label">
+				小视频
+			</div>
 		</div>-->
-	</body>
-	<script type="text/javascript" src="html/script/api.js"></script>
-	<script type="text/javascript" src="html/script/ffxiang.js"></script>
-	<script type="text/javascript">
-		apiready = function() {
-			api.parseTapmode();
-			var _this = $api.byId('mb');
-			var h = api.winHeight;
-			h = h - $api.offset(_this).h;
-			h = h / 2 - 100;
-			$api.css(_this,'padding-top:'+h+'px')
-		//	config()
-			// 判断返回键
-			api.addEventListener({
-				name : 'keyback'
-			}, function(ret, err) {
-				api.execScript({
-					frameName : 'ffxiang_win',
-					script : 'keyback()'
-				});
-			});
-			//自动进入趣头条
-			var mb = 'qutoutiao';
-			muban = mb+'/';
-			html_win = 'widget://html/'+muban;
-			$api.setStorage('muban', mb);
-			config();
-		}
-		// 设置模板
-		function mb(_this){
-			_alert('若需选择新模板，关掉APP重新打开')
-			var mb = $api.attr(_this,'type');
-			muban = mb+'/';
-			html_win = 'widget://html/'+muban;
-			$api.setStorage('muban', mb);
-			config();
-		}
-		function dianhua(){
-			api.call({
-			    type: 'tel_prompt',
-			    number: '123'
-			});
-		}
-		// 获取配置分类
-		function config(){
-			_ajax('api/article/typeid/field/id,title',function(ret,err){
-//				console.log()
-				if(ret){
-					$api.setStorage('typeid', ret);
-					viewtypeid();
-					openFrame('ffxiang_win');
-					// api.closeFrame();
-				}else{
-					setTimeout(function(){
-						config()
-					},1000)
-				}
-			})
-			
-//			_ajax('index/config',function(ret,err){
-//				if(ret){
-//					openFrame('index','index');
-//					api.closeFrame();
-//				}else{
-//					setTimeout(function(){
-//						config()
-//					},1500)
-//				}
-//			})
-		} 
-		 
-		function openFrame(url) {
-			// 解析属性	消除点击300S 延时问题 tapmode
-			api.openFrame({
-				name : 'ffxiang_win',
-				url : html_win+url+'.html',
-				bounces : false,
-				reload : true,
-				rect : {
-					x : 0,
-					y : 0,
-					w : 'auto',
-					h : 'auto'
+		<div class="aui-bar-tab-item" tapmode onclick="_index_win('member_win')">
+			<img class="aui-img-object" src="image/w4.png" />
+			<div class="aui-bar-tab-label">
+				会员
+			</div>
+		</div>
+	</footer>
+</body>
+<script type="text/javascript" src="script/api.js"></script>
+<script type="text/javascript" src="script/ffxiang.js"></script>
+<script type="text/javascript">
+	var body_h;
+	var headerPos;
+	var typeid;
+	var NVNavigationBar;
+	// 分类栏目模块
+	var heiff = 35;
+	var activity
+	var likaitime = 60000; //1000=1秒
+	var time
+	//输入35会显示右侧点击
+	apiready = function () {
+
+
+		api.addEventListener({
+			name: 'keyback'
+		}, function () {
+			// alert(1111)
+			api.closeWidget({
+				id: 'A6155600155869',
+				retData: {
+					name: 'closeWidget'
 				},
+				animation: {
+					type: 'flip',
+					subType: 'from_bottom',
+					duration: 500
+				},
+				silent: true
 			})
-			
+		})
+
+		NVNavigationBar = api.require('NVNavigationBar');
+		if (!$api.getStorage('yindaotu')) {
+			_openFrame('yindaotu')
+		} else {
+			dat()
 		}
-		// 读取视频分类存储本都
-		function viewtypeid(){
-			_ajax('api/article/videoTypeid', function(ret, err) {
-				//console.log(JSON.stringify(ret))
-				if (ret) {
-					$api.setStorage('videoTypeid', ret);
+
+
+		//	 _url({index:1},'member/ScLs_win',true)
+		// 回到屏幕
+		api.addEventListener({
+			name: 'viewappear'
+		}, function (ret, err) {
+			_heibai();
+			api.setFullScreen({
+				fullScreen: false
+			});
+			// 2018年3月10日 22:09:31 增加
+			// 每日登录奖励
+			_daily({
+				name: 'money_login'
+			})
+			// 每日阅读5篇奖励
+			//_daily({name:'money_news'})
+		});
+		_heibai();
+		api.addEventListener({
+			name: 'smartupdatefinish'
+		}, function (ret, err) {
+			alert('APP自动修复完成，需要重启APP才能生效');
+			api.rebootApp();
+		});
+		// 监听夜间
+		api.addEventListener({
+			name: 'yejian'
+		}, function (ret, err) {
+			if (ret) {
+				_yejians();
+			}
+		});
+
+		//应用进入后台事件
+		api.addEventListener({
+			name: 'pause'
+		}, function (ret, err) {
+			time = Date.parse(new Date());
+			time = time + likaitime
+			$api.setStorage('time', time);
+		});
+		// 应用从后台回到前台事件
+		api.addEventListener({
+			name: 'resume'
+		}, function (ret, err) {
+			time = Date.parse(new Date());
+			if ($api.getStorage('time')) {
+				if (time > $api.getStorage('time')) {
+					ad()
 				}
+			}
+		});
+
+
+
+
+
+
+	}
+
+
+	function view() {
+		header = $api.byId('fx-header');
+		$api.fixStatusBar(header);
+		headerPos = $api.offset(header);
+		body_h = $api.offset($api.dom('body')).h;
+		$api.fixTabBar($api.byId('fx-footer'))
+		footerh = $api.offset($api.byId('fx-footer')).h;
+		footerh = footerh - 5
+
+		var ret = $api.getStorage('typeid');
+		// 获取上架显示
+		_shangjia()
+		// 2018年3月1日 13:35:28 增加获取配置
+		_config();
+		// 配置结束
+
+		if (ret) {
+			api.closeFrame({
+				name: 'error'
+			});
+
+			console.log(headerPos.h)
+			typeid = ret.typeid // 获取分类json
+			// 读取栏目分类模块
+			NVNavigationBar.open({
+				rect: {
+					x: 0,
+					y: headerPos.h - 36,
+					w: api.frameWidth,
+					h: heiff
+				},
+				styles: {
+					orientation: 'horizontal',
+					bg: '#fff',
+					bgAlpha: 1,
+					font: {
+						size: 17,
+						sizeSelected: 18,
+						color: '#222222',
+						colorSelected: '#D43D3D',
+						alpha: 1
+					},
+					itemSize: {
+						w: 50,
+						h: heiff
+					}
+				},
+				items: ret.data,
+				selectedIndex: 0,
+				fixedOn: api.frameName,
+				id: 'first'
+			}, function (ret, err) {
+				console.log(JSON.stringify(ret))
+				// UILoadingClose();
+				if (ret.eventType == 'click') {
+					randomSwitchBtn(ret.index)
+				}
+				if (ret.eventType == 'show') {
+					UILoadingClose()
+					if ($api.getStorage('city')) {
+						updateItem()
+					} else {
+						cityAjax()
+					}
+				}
+			});
+			// 读取frm文件
+			var frames = [];
+			for (var i = 0; i < typeid.length; i++) {
+				var frame = {};
+				frame.name = 'frame_' + i;
+				frame.url = html_win + 'ffxiang_frm.html';
+				frame.pageParam = {
+					id: typeid[i],
+				};
+				//				frame.vScrollBarEnabled = false;
+				//				frame.hScrollBarEnabled = false;
+				frames.push(frame);
+				frames.useWKWebView = true;
+				frames.historyGestureEnabled = true;
+			}
+			openFrameGroup(frames);
+			// 上面全部加载完毕解析 属性 不然点击按钮会有延时300
+			api.parseTapmode();
+		} else {
+			api.openFrame({
+				name: 'error',
+				url: html_win + 'error.html',
+				bounces: false,
+				rect: {
+					x: 0,
+					y: 0,
+					w: 'auto',
+					h: 'auto'
+				},
+				useWKWebView: true,
+				historyGestureEnabled: true,
+				vScrollBarEnabled: false,
+				hScrollBarEnabled: false,
 			})
+
+			//alert(JSON.stringify(err))
 		}
+
+
+	}
+
+	function openFrameGroup(frames) {
+		api.openFrameGroup({
+			name: 'ffxiang_frm',
+			scrollEnabled: true,
+			rect: {
+				x: 0,
+				y: headerPos.h + heiff - 35,
+				w: 'auto',
+				h: body_h - headerPos.h - heiff + 30 - footerh,
+			},
+			index: 1,
+			frames: frames,
+			preload: 0, // 预加载的 frame 个数，默认加载当前页后面一个
+		}, function (ret, err) {
+			// 当滑动时，设置栏目选中颜色
+			NVNavigationBar.setSelected({
+				id: 'first',
+				index: ret.index,
+				selected: true
+			});
+			retindex = ret.index
+		});
+	}
+
+	// 点击分类栏目时，设置 frame 组当前可见 frame
+	function randomSwitchBtn(index) {
+		api.setFrameGroupIndex({
+			name: 'ffxiang_frm',
+			index: index,
+			scroll: true, //是否平滑滚动至目标窗口，即是否带有动画
+			//reload:true,	// 刷新
+		});
+	}
+
+	// 读取会员信息
+	function _user() {
+		api.sendEvent({
+			name: 'ffxiangUser',
+			extra: {
+				user: $api.getStorage('user'),
+			}
+		});
+	}
+
+	// 搜索
+	function search() {
+		api.openWin({
+			name: 'search_win',
+			url: html_win + 'search_win.html',
+			slidBackEnabled: false,
+			animation: {
+				type: "fade", //动画类型（详见动画类型常量）
+				subType: "from_right", //动画子类型（详见动画子类型常量）
+				duration: 300
+			},
+			pageParam: {
+				qian: 1,
+				fan: 0
+			}
+		});
+	}
+
+	// 打开提示
+	function UILoadings() {
+		var loading = new Array;
+		for (var i = 0; i < 39; i++) {
+			loading[i] = {
+				frame: 'widget://image/loading/' + (i + 1) + '.fw.png'
+			};
+		}
+		UILoading = api.require('UILoading');
+		UILoading.keyFrame({
+			rect: {
+				w: api.winWidth,
+				h: api.winHeight
+			},
+			styles: {
+				bg: '#fff',
+				corner: 0,
+				interval: 39,
+				frame: {
+					w: 247,
+					h: 271
+				}
+			},
+			content: loading,
+			mask: '#fff'
+		}, function (ret) {});
+	}
+
+	// 关闭提示
+	function UILoadingClose() {
+		UILoading.closeKeyFrame();
+	}
+
+	// 夜间
+	function yejian() {
+		api.sendEvent({
+			name: 'yejian',
+			extra: {
+				yejian: '1',
+			}
+		});
+	}
+	// 首次获取城市定位
+	function cityAjax() {
+		var baiduLocation = api.require('baiduLocation');
+		baiduLocation.startLocation({}, function (ret, err) {
+			if (ret.status) {
+				var latitude = ret.latitude
+				var longitude = ret.longitude
+
+				if (latitude && longitude) {
+					_ajax('api/index/cityDingwei', function (ret, err) {
+						if (ret) {
+							if (ret.ret) {
+								//	alert('latitude:'+latitude+"\r\nlongitude:"+longitude+"\r\nret:"+JSON.stringify(ret.ret))
+								ret = ret.ret
+								$api.setStorage('city', encodeURIComponent(encodeURIComponent(ret)));
+								updateItem(ret)
+							}
+						}
+					}, {
+						latitude: latitude,
+						longitude: longitude
+					})
+				}
+			}
+		});
+	}
+	// 更新栏目城市
+	function updateItem(ret) {
+		ret = ret ? ret : decodeURIComponent(decodeURIComponent($api.getStorage('city')));
+		if (!ret || ret == "") {
+			return;
+		}
+		if (ret == 'undefined') {
+			ret = '本地'
+		}
+		var w = typeidstrlen(ret);
+		NVNavigationBar.updateItem({
+			id: 'first',
+			index: 2,
+			item: {
+				title: ret,
+				bgSelected: '#fff',
+				bg: '#fff',
+				size: {
+					w: w,
+					h: heiff
+				}
+			}
+		});
+
+	}
+	// 更新选择城市新闻
+	function cityNews() {
+		updateItem()
+		api.execScript({
+			frameName: 'frame_2',
+			script: 'cityNews()'
+		});
+
+		NVNavigationBar.setSelected({
+			id: 'first',
+			index: 2,
+			selected: true
+		});
+	}
+	// 分类取出长度
+	function typeidstrlen(str) {
+		if (str.length < 3) {
+			return 50;
+		}
+		var len = 0;
+		for (var i = 0; i < str.length; i++) {
+			var c = str.charCodeAt(i);
+			//单字节加1
+			if ((c >= 0x0001 && c <= 0x007e) || (0xff60 <= c && c <= 0xff9f)) {
+				len++;
+			} else {
+				len += 3;
+			}
+		}
+		return Math.ceil(len * 8.3333333);
+	}
+	// 广告
+	function ad() {
+		if ($api.getStorage('ad') && $api.getStorage('adimage')) {
+			api.openWin({
+				name: 'ad',
+				url: html_win + 'ad.html',
+				reload: true,
+				bounces: false,
+				animation: {
+					type: "none", //动画类型（详见动画类型常量）
+					subType: "from_bottom", //动画子类型（详见动画子类型常量）
+					duration: 300
+				},
+			});
+		} else {
+			adAjax()
+		}
+	}
+
+	function adAjax() {
+		_ajax('api/article/ad', function (ret, err) {
+			if (ret) {
+				if (ret.ret) {
+					console.log(JSON.stringify(ret.ret));
+					$api.setStorage('ad', ret.ret);
+					console.log(fx_cdn + ret.ret.data.image)
+					api.imageCache({
+						url: fx_cdn + ret.ret.data.image,
+						thumbnail: false,
+					}, function (ret, err) {
+						if (ret) {
+							if (ret.status) {
+								console.log(ret.url);
+								$api.setStorage('adimage', ret.url);
+							}
+						}
+					});
+					return;
+				}
+			}
+			$api.rmStorage('ad')
+			$api.rmStorage('adimage')
+		})
+	}
+	//  获取配置
+	function _config() {
+		_ajax('api/article/config', function (ret, err) {
+			if (ret) {
+				//	console.log(JSON.stringify(ret));
+				$api.setStorage('config', ret);
+				//	_index_win('member_win')
+			} else {
+				alert(JSON.stringify(err));
+			}
+		})
+	}
+	// 获取上架记录
+	function _shangjia() {
+		_ajax('api/index/pingguoApp', function (ret, err) {
+			if (ret) {
+				$api.setStorage('app', '1');
+			} else {
+				$api.rmStorage('app')
+			}
+		})
+	}
+	// 更新用户信息
+	function _userInfo() {
+		console.log('用户更新成功拉！')
+		_user = $api.getStorage('user')
+		if (!_user) {
+			return;
+		}
+		_ajax('api/member/info', function (ret, err) {
+			if (ret) {
+				$api.setStorage('user', ret.ret);
+			}
+		})
+	}
+
+	function dat() {
+		UILoadings()
+		view();
+		ad()
+	}
 </script>
+
 </html>
+
